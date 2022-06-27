@@ -26,13 +26,7 @@ export const HomeLayout = () => {
 								<img src={figure} alt="man searching at sky" />
 							</S.Image>
 						)}
-						{repos?.length === 0 && (
-							<S.Empty>
-								<h2>Nenhum repositório encontrado</h2>
-							</S.Empty>
-						)}
-
-						<RepositoriesGrid />
+						{user && repos && <RepositoriesGrid />}
 					</S.Main>
 				</S.Content>
 			</FullWidthWrapper>
