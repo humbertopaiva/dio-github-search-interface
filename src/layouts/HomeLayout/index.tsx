@@ -7,14 +7,10 @@ import { UserCard } from "../../components/UserCard";
 import { useGithubApi } from "../../hooks/GithubApiContext";
 import * as S from "./styles";
 import { Pagination } from "@mantine/core";
+import figure from "../../assets/figure_bg.png";
 
 export const HomeLayout = () => {
-	const { repos } = useGithubApi();
-	const [repositories, setRepositories] = useState<Repository[]>([]);
-
-	useEffect(() => {
-		if (repos) setRepositories(repos);
-	}, [repos]);
+	const { user, repos } = useGithubApi();
 
 	return (
 		<>
@@ -25,7 +21,18 @@ export const HomeLayout = () => {
 						<SearchBox />
 					</S.Aside>
 					<S.Main>
-						<RepositoriesGrid repositories={repositories} />
+						{!user && (
+							<S.Image>
+								<img src={figure} alt="man searching at sky" />
+							</S.Image>
+						)}
+						{repos?.length === 0 && (
+							<S.Empty>
+								<h2>Nenhum repositório encontrado</h2>
+							</S.Empty>
+						)}
+
+						<RepositoriesGrid />
 					</S.Main>
 				</S.Content>
 			</FullWidthWrapper>

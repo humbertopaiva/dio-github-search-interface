@@ -11,27 +11,45 @@ export const UserCard = () => {
 			<S.Content>
 				<S.Image>
 					<div>
-						<img alt={user?.login} src={user?.avatar_url} />
+						<img
+							alt={user ? user.login : "github logo"}
+							src={
+								user
+									? user.avatar_url
+									: "https://cdn-icons-png.flaticon.com/512/25/25231.png"
+							}
+						/>
 					</div>
 				</S.Image>
 				<S.Username>
-					<h2>{user?.name}</h2>
-					<h3 className="color-dark">@{user?.login}</h3>
+					{user ? (
+						<>
+							<h2>{user?.name}</h2>
+							<h3 className="color-dark">@{user?.login}</h3>
+						</>
+					) : (
+						<h3>
+							Pesquise por um usuário do Github no campo de
+							pesquisa abaixo
+						</h3>
+					)}
 				</S.Username>
-				<S.Infos className="color-dark">
-					<div>
-						<h4>Followers</h4>
-						<span>{user?.followers}</span>
-					</div>
-					<div>
-						<h4>Following</h4>
-						<span>{user?.following}</span>
-					</div>
-					<div>
-						<h4>Gists</h4>
-						<span>{user?.public_gists}</span>
-					</div>
-				</S.Infos>
+				{user && (
+					<S.Infos className="color-dark">
+						<div>
+							<h4>Followers</h4>
+							<span>{user?.followers}</span>
+						</div>
+						<div>
+							<h4>Following</h4>
+							<span>{user?.following}</span>
+						</div>
+						<div>
+							<h4>Gists</h4>
+							<span>{user?.public_gists}</span>
+						</div>
+					</S.Infos>
+				)}
 			</S.Content>
 		</S.Container>
 	);

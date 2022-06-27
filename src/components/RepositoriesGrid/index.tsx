@@ -1,14 +1,14 @@
+import { useEffect } from "react";
+import { useGithubApi } from "../../hooks/GithubApiContext";
 import { RepositoryCard } from "../RespositoryCard";
 import * as S from "./styles";
 
-interface RepositoriesGridProps {
-	repositories: Repository[] | null;
-}
+export const RepositoriesGrid = () => {
+	const { repos, setRepos, user } = useGithubApi();
 
-export const RepositoriesGrid = ({ repositories }: RepositoriesGridProps) => {
 	return (
 		<S.Container>
-			{repositories?.map((repo) => (
+			{repos?.map((repo) => (
 				<RepositoryCard
 					key={repo.id}
 					description={repo.description}

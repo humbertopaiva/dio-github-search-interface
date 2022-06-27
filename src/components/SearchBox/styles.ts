@@ -23,18 +23,33 @@ export const Content = styled.div`
 			outline: none;
 			box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 		}
+
+		&.error {
+			border: 2px solid red;
+			color: red;
+		}
 	}
 
-	button {
-		min-width: 100px;
-		border: none;
-		background-color: var(--color-primary);
+	.clear-button {
+		background-color: var(--color-secondary);
 		color: var(--color-gray-50);
-		border-radius: 4px;
-		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	}
+`;
 
-		&:hover {
-			background-color: var(--color-secondary);
-		}
+export const SearchButton = styled.button`
+	padding: 0 1rem;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background-color: var(--color-primary);
+	color: var(--color-gray-50);
+	border-radius: 4px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	margin-left: 0.5rem;
+
+	&:hover {
+		background-color: var(--color-secondary);
 	}
 `;

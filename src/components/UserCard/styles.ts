@@ -13,6 +13,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+	min-height: 450px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -30,6 +31,7 @@ export const Content = styled.div`
 export const Username = styled.div`
 	color: var(--color-gray-50);
 	width: 100%;
+	max-width: 300px;
 
 	text-align: center;
 
@@ -37,6 +39,10 @@ export const Username = styled.div`
 		font-size: 2rem;
 		line-height: 2rem;
 		margin: 1rem 0;
+	}
+
+	h3 {
+		margin-top: 1rem;
 	}
 `;
 
