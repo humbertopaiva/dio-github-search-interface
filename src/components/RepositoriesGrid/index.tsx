@@ -4,11 +4,11 @@ import { RepositoryCard } from "../RespositoryCard";
 import * as S from "./styles";
 
 export const RepositoriesGrid = () => {
-	const { repos } = useGithubApi();
+	const { repos, isLoading } = useGithubApi();
 
 	return (
 		<>
-			{repos?.length === 0 ? (
+			{repos?.length === 0 && isLoading === false ? (
 				<S.Empty>
 					{" "}
 					<h2>Nenhum repositório encontrado</h2>

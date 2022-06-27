@@ -11,6 +11,7 @@ import {
 interface GithubApiContextProps {
 	user: User | null;
 	repos: Repository[] | null;
+	isLoading: boolean;
 	setUser: (user: User | null) => void;
 	setRepos: (repos: Repository[]) => void;
 	getUserData(username: string): void;
@@ -22,6 +23,7 @@ const initialValue = {
 	setUser: () => null,
 	setRepos: () => null,
 	getUserData: () => {},
+	isLoading: false,
 };
 
 export const GithubApiContext =
@@ -30,6 +32,7 @@ export const GithubApiContext =
 export const GithubApiProvider = ({ children }: { children?: ReactNode }) => {
 	const [user, setUser] = useState<User | null>(null);
 	const [repos, setRepos] = useState<Repository[]>([]);
+	const [isLoading, setIsLoading] = useState(false);
 
 	const getUserData = (username: string): void => {
 		axios
@@ -45,6 +48,8 @@ export const GithubApiProvider = ({ children }: { children?: ReactNode }) => {
 							const reposData = res.data;
 							setRepos(reposData);
 						});
+
+				setIsLoading(false);
 			})
 			.catch((err) =>
 				toast.error("Usuário não encontrado", {
@@ -71,6 +76,7 @@ export const GithubApiProvider = ({ children }: { children?: ReactNode }) => {
 				setRepos,
 				repos,
 				getUserData,
+				isLoading,
 			}}
 		>
 			{children}
