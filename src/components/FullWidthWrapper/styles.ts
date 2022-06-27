@@ -5,7 +5,6 @@ export const Wrapper = styled.section`
 	min-height: 100vh;
 
 	justify-content: center;
-	margin: 1rem 0; ;
 `;
 
 export const Container = styled.div`

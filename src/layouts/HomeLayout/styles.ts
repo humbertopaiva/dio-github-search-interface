@@ -7,7 +7,7 @@ export const Content = styled.div`
 	padding: 1rem;
 
 	& {
-		@media (max-width: 900px) {
+		@media (max-width: 912px) {
 			flex-wrap: wrap;
 		}
 	}
@@ -25,9 +25,11 @@ export const Aside = styled.aside`
 	margin-bottom: 2rem;
 
 	& {
-		@media (max-width: 900px) {
+		@media (max-width: 912px) {
 			flex-wrap: wrap;
 			width: 100%;
+
+			margin-right: 0;
 		}
 	}
 `;

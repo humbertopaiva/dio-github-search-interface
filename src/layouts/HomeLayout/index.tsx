@@ -6,6 +6,7 @@ import { SearchBox } from "../../components/SearchBox";
 import { UserCard } from "../../components/UserCard";
 import { useGithubApi } from "../../hooks/GithubApiContext";
 import * as S from "./styles";
+import { Pagination } from "@mantine/core";
 
 export const HomeLayout = () => {
 	const { repos } = useGithubApi();
