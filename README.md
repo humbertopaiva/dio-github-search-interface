@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Desafio - Criando um front-end totalmente componentizado com React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://images.prismic.io/humbertopaiva-portfolio/ddbbfb1f-a68b-413d-b27e-3fde690c83bd_tp238-pf-s73-05-mockup.jpg?auto=compress,format" alt="mockup projeto">
 
-## Available Scripts
+Desafio sugerido pela Digital Inovation One, para o bootcamp da Impulso Javascript Evolution. Nele, construí uma aplicação utilizando a API de busca do Github para buscar usuários e listar seus repositórios.
 
-In the project directory, you can run:
+## Demo do projeto
 
-### `yarn start`
+<a href="https://dio-github-search-interface.vercel.app/" target="_blank">Clique aqui para ver a demo</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Features
 
-### `yarn test`
+- Consulta de usuários por nome, via API de buscas do Github
+- Listagem de repositórios dos usuários encontrados
+- Link de acesso para os repositórios listados
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tecnologias usadas
 
-### `yarn build`
+![image](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![image](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![image](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![image](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
+![image](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Context API] [Styled-Components] 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Rodando o projeto na sua máquina
 
-### `yarn eject`
+Para instalar o projeto em sua máquina, siga estas etapas:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1 - Clone o repositório para o seu computador
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2 - Inicialize o repositório e execute os comandos em sequência:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+yarn install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+yarn start 
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
