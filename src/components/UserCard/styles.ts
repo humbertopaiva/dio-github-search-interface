@@ -38,7 +38,23 @@ export const Username = styled.div`
 	h2 {
 		font-size: 2rem;
 		line-height: 2rem;
-		margin: 1rem 0;
+		margin: 1.5rem 0;
+	}
+
+	a {
+		text-decoration: none;
+		margin: 2rem 0;
+		border: 1px solid var(--color-primary-accent);
+		padding: 0.3rem;
+		border-radius: 4px;
+		color: var(--color-primary-accent);
+		font-weight: 500;
+
+		&:hover {
+			border-color: transparent;
+			background-color: var(--color-primary-accent);
+			color: var(--color-card-bg);
+		}
 	}
 
 	h3 {
@@ -51,7 +67,7 @@ export const Infos = styled.div`
 	max-width: 300px;
 	display: flex;
 	justify-content: space-around;
-	margin: 0.75rem 0;
+	margin: 1.5rem 0;
 	color: var(--color-gray-100);
 
 	div {

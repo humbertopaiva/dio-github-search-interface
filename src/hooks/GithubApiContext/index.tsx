@@ -35,6 +35,7 @@ export const GithubApiProvider = ({ children }: { children?: ReactNode }) => {
 	const [isLoading, setIsLoading] = useState(false);
 
 	const getUserData = (username: string): void => {
+		setIsLoading(true);
 		axios
 			.get(`https://api.github.com/users/${username}`)
 			.then((res) => {
@@ -62,6 +63,7 @@ export const GithubApiProvider = ({ children }: { children?: ReactNode }) => {
 					progress: undefined,
 				})
 			);
+		setIsLoading(false);
 	};
 
 	useEffect(() => {

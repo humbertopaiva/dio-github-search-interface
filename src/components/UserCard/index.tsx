@@ -25,7 +25,12 @@ export const UserCard = () => {
 					{user ? (
 						<>
 							<h2>{user?.name}</h2>
-							<h3 className="color-dark">@{user?.login}</h3>
+							<a
+								href={`https://github.com/${user.login}`}
+								target="_blank"
+							>
+								@{user?.login}
+							</a>
 						</>
 					) : (
 						<h3>
