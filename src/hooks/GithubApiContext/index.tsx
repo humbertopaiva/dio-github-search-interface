@@ -31,11 +31,13 @@ export const GithubApiContext =
 
 export const GithubApiProvider = ({ children }: { children?: ReactNode }) => {
 	const [user, setUser] = useState<User | null>(null);
-	const [repos, setRepos] = useState<Repository[]>([]);
-	const [isLoading, setIsLoading] = useState(false);
+	const [repos, setRepos] = useState<Repository[] | null>(null);
+	const [isLoading, setIsLoading] = useState(true);
 
 	const getUserData = (username: string): void => {
 		setIsLoading(true);
+		setUser(null);
+		setRepos(null);
 		axios
 			.get(`https://api.github.com/users/${username}`)
 			.then((res) => {
@@ -49,8 +51,6 @@ export const GithubApiProvider = ({ children }: { children?: ReactNode }) => {
 							const reposData = res.data;
 							setRepos(reposData);
 						});
-
-				setIsLoading(false);
 			})
 			.catch((err) =>
 				toast.error("Usuário não encontrado", {
@@ -63,6 +63,7 @@ export const GithubApiProvider = ({ children }: { children?: ReactNode }) => {
 					progress: undefined,
 				})
 			);
+
 		setIsLoading(false);
 	};
 

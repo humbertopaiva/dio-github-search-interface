@@ -10,24 +10,21 @@ export const RepositoriesGrid = () => {
 		<>
 			{isLoading && <Spinner />}
 
+			{repos?.length === 0 && !isLoading && (
+				<S.Empty>
+					<h2>Nenhum repositório encontrado</h2>
+				</S.Empty>
+			)}
+
 			<S.Container>
-				{repos?.map((repo, _, arr) => {
-					if (arr.length === 0)
-						return (
-							<S.Empty>
-								<h2>Nenhum repositório encontrado</h2>
-							</S.Empty>
-						);
-					else
-						return (
-							<RepositoryCard
-								key={repo.id}
-								description={repo.description}
-								title={repo.name}
-								url={repo.html_url}
-							/>
-						);
-				})}
+				{repos?.map((repo) => (
+					<RepositoryCard
+						key={repo.id}
+						description={repo.description}
+						title={repo.name}
+						url={repo.html_url}
+					/>
+				))}
 			</S.Container>
 		</>
 	);

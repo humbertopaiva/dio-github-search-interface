@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const SearchBox = () => {
 	const [inputText, setInputText] = useState("");
-	const { user, setUser, getUserData } = useGithubApi();
+	const { setUser, getUserData } = useGithubApi();
 	const [isSearching, setIsSearching] = useState(true);
 
 	const handleSearch = () => {
