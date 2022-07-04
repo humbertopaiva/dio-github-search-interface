@@ -7,16 +7,11 @@ interface RepositoryCardProps {
 	url?: string;
 }
 
-export const RepositoryCard = ({
-	title = "Título do card",
-	description = "Descrição top do projeto blablaba blablabab lablabab	lablababl ablabablablaba blabl abablabl abablablaba",
-	url = "www.google.com",
-}: RepositoryCardProps) => {
+export const RepositoryCard = ({ title, url }: RepositoryCardProps) => {
 	return (
 		<S.Container>
 			<S.Content>
 				<S.Title>{title}</S.Title>
-				<S.Description>{description}</S.Description>
 				<S.Link>
 					<a href={url} target="_blank">
 						Acesse o projeto

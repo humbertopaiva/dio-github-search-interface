@@ -4,15 +4,15 @@ export const Container = styled.section`
 	height: 100%;
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(3, minmax(250px, max-content));
+	grid-template-columns: repeat(3, 1fr);
 
 	& {
 		@media (max-width: 1200px) {
-			grid-template-columns: repeat(2, minmax(250px, max-content));
+			grid-template-columns: repeat(2, 1fr);
 		}
 
 		@media (max-width: 600px) {
-			grid-template-columns: repeat(1, minmax(250px, max-content));
+			grid-template-columns: repeat(1, 100%);
 		}
 	}
 

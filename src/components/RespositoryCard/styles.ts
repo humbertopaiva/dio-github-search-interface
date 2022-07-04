@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.article`
 	width: 100%;
-	height: 150px;
+	height: 130px;
 	border: 3px solid var(--color-primary);
 	border-radius: 4px;
 	padding: 1rem;
@@ -28,17 +28,6 @@ export const Title = styled.h3`
 	font-size: 1.25rem;
 	color: var(--color-primary);
 	margin-bottom: 0.25rem;
-`;
-
-export const Description = styled.p`
-	width: 100%;
-	font-size: 0.8rem;
-	white-space: nowrap; /* Removendo quebra de linha */
-	overflow: hidden; /* Removendo a barra de rolagem */
-	text-overflow: ellipsis; /* Adicionando "..." ao final do texto */
-	line-clamp: 2;
-	height: 100%;
-	margin-bottom: 1rem;
 `;
 
 export const Link = styled.div`
